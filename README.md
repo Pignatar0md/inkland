@@ -1,79 +1,74 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# INKland
 
-# Getting Started
+The definitive app for the tattos world.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+**Requirements:**
 
-## Step 1: Start the Metro Server
+<!-- UL -->
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- node >= 18.19.0
+- npm >= 10.2.3
+- git
+- cocoapods >= 1.15.2
+- watchman (only linux and mac users)
+- AndroidStudio (optional but recommended)
+- XCode (optional: if you have an Apple computer)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Installation
 
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+In a terminal, after cloning the repo, please navigate to the root folder:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+cd ./inklandmobile
 ```
 
-### For iOS
+Once there, run this:
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm install --legacy-peer-deps
+npm audit fix --legacy-peer-deps
+npx npm-force-resolutions
+npx pod-install
+npm run bundle-ios
+npm run bundle-android
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Configuration
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Android: We need to specify the sdk location, in the local.properties file inside the android/ folder.
+For mac e.g.: sdk.dir=/Users/_USERNAME_/Library/Android/sdk
 
-## Step 3: Modifying your App
+Now you can open the code with your preferred code editor and set the variables inside the .env file located in the root folder (ask for its values to another dev who already is working on this project):
 
-Now that you have successfully run the app, let's modify it.
+```bash
+API_BASE=https://puttheurlapihere.com
+.
+.
+.
+```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Let's go back to the terminal and run:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+```bash
+npx react-native start
+```
 
-## Congratulations! :tada:
+![rn running in terminal](https://media.geeksforgeeks.org/wp-content/uploads/20221208184915/npxreactnativestart.png)
 
-You've successfully run and modified your React Native App. :partying_face:
+You should see something like this ---^
 
-### Now what?
+Now you should open the iOS project on Xcode, going to the root application folder -> ios and double clic on .xcworkspace file.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+Once you opened the iOS project in XCode, you should link the ios/main.jsbundle file. So, right clic on VFXFinancial folder inside inklandmobile project -> add files to... (select the file), copy file if it needed (checked) and add files to project (inklandmobile checked).
 
-# Troubleshooting
+Should open the AndroidStudio project opening the AndroidStudio IDE and pressing "Open project", after that selecting the android folder inside the root application folder.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+If you run in other terminal:
 
-# Learn More
+```bash
+npm run test
+```
 
-To learn more about React Native, take a look at the following resources:
+You will see the tests running while you are adding or modifying code.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Happy coding!
