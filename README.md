@@ -4,7 +4,7 @@ The definitive app for the tattos world.
 
 iOS: [![Build status](https://build.appcenter.ms/v0.1/apps/6d11a65b-1652-49c2-b693-ea8acc608f93/branches/dev/badge)](https://appcenter.ms)
 
-Android: [![Build status](https://build.appcenter.ms/v0.1/apps/c6c3c56b-8256-4ba8-be06-7629283d5f0d/branches/dev/badge)](https://appcenter.ms)
+Android: [![Build status](https://build.appcenter.ms/v0.1/apps/3999004b-36cb-486c-9cdb-0cd44b49319a/branches/dev/badge)](https://appcenter.ms)
 
 #
 
