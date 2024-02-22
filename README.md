@@ -2,9 +2,9 @@
 
 The definitive app for the tattos world.
 
-[![Build status](https://build.appcenter.ms/v0.1/apps/a9e30cf3-5304-47a0-921c-2ab9158d63b7/branches/dev/badge)](https://appcenter.ms)
+iOS: [![Build status](https://build.appcenter.ms/v0.1/apps/6d11a65b-1652-49c2-b693-ea8acc608f93/branches/dev/badge)](https://appcenter.ms)
 
-[![Build status](https://build.appcenter.ms/v0.1/apps/c6c3c56b-8256-4ba8-be06-7629283d5f0d/branches/dev/badge)](https://appcenter.ms)
+Android: [![Build status](https://build.appcenter.ms/v0.1/apps/c6c3c56b-8256-4ba8-be06-7629283d5f0d/branches/dev/badge)](https://appcenter.ms)
 
 #
 
