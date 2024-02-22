@@ -2,6 +2,10 @@
 
 The definitive app for the tattos world.
 
+[![Build status](https://build.appcenter.ms/v0.1/apps/a9e30cf3-5304-47a0-921c-2ab9158d63b7/branches/dev/badge)](https://appcenter.ms)
+
+#
+
 **Requirements:**
 
 <!-- UL -->
