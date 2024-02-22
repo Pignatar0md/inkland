@@ -9,6 +9,7 @@ build/
 !default.pbxuser
 *.mode1v3
 !default.mode1v3
+ios/inklandmobile.xcworkspace/xcshareddata/*
 *.mode2v3
 !default.mode2v3
 *.perspectivev3
@@ -39,7 +40,8 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
-
+.env*
+.hintrc
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
