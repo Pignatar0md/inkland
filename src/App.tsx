@@ -1,9 +1,8 @@
 import React from 'react';
-import {Alert, Button, View} from 'react-native';
+import {Alert, View} from 'react-native';
 import Crashes from 'appcenter-crashes';
 import Analytics from 'appcenter-analytics';
-import {Standard} from './components/tags';
-
+import Login from './screens/Login';
 export default class App extends React.Component {
   constructor(props: any) {
     super(props);
@@ -24,23 +23,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Standard type={'primary'}>hey</Standard>
-        <Button
-          title="crash"
-          onPress={() => {
-            Crashes.generateTestCrash();
-          }}
-        />
-
-        <Button
-          title="send report"
-          onPress={() => {
-            Analytics.trackEvent('hi hi', {
-              date: "'" + new Date() + "'",
-              Internet: 'wifi',
-            });
-          }}
-        />
+        <Login />
       </View>
     );
   }

@@ -38,6 +38,17 @@
                ReferencedContainer = "container:inklandmobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9C3392CB2B8A144D00FB86C1"
+               BuildableName = "inklandmobileUITests.xctest"
+               BlueprintName = "inklandmobileUITests"
+               ReferencedContainer = "container:inklandmobile.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
