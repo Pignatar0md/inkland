@@ -2,7 +2,8 @@ import React from 'react';
 import {Alert, View} from 'react-native';
 import Crashes from 'appcenter-crashes';
 import Analytics from 'appcenter-analytics';
-import Login from './screens/Login';
+import {Login} from './components/screens';
+
 export default class App extends React.Component {
   constructor(props: any) {
     super(props);

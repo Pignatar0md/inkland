@@ -1,4 +1,4 @@
-import {semantic} from '../../assets/semantic';
+import {semantic} from '../../../assets/semantic';
 import React from 'react';
 import {FC, ReactElement, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
