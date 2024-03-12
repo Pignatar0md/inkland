@@ -557,6 +557,7 @@
 				DEVELOPMENT_TEAM = NGRK4TL3AQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = inklandmobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = inkland;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +590,7 @@
 				DEVELOPMENT_TEAM = NGRK4TL3AQ;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = inklandmobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = inkland;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,7 +677,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -740,7 +745,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
