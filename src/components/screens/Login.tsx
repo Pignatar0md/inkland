@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  TextInput,
-  Button,
-  Text,
-  View,
-  Platform,
-  TouchableOpacity,
-} from 'react-native';
+import {TextInput, Text, Platform, TouchableOpacity} from 'react-native';
 
 const Login = () => {
   const [numberA, setNumberA] = useState('');
@@ -46,16 +39,17 @@ const Login = () => {
         onPress={() => sumNumbers()}>
         <Text>SUM</Text>
       </TouchableOpacity>
-      <Button
-        title="quit"
+      <TouchableOpacity
+        accessible={Platform.OS === 'ios' ? false : true}
         onPress={() => {
           quitNumbers();
           // Analytics.trackEvent('hi hi', {
           //   date: "'" + new Date() + "'",
           //   Internet: 'wifi',
           // });
-        }}
-      />
+        }}>
+        <Text>quit</Text>
+      </TouchableOpacity>
     </>
   );
 };

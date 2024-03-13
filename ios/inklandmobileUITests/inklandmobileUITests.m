@@ -27,7 +27,7 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
+- (void)testSum {
     // UI tests must launch the application that they test.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
   [XCTContext runActivityNamed:@"screenshot" block:^(id<XCTActivity>  _Nonnull activity) {
@@ -42,6 +42,25 @@
     [app/*@START_MENU_TOKEN@*/.buttons[@"Return"]/*[[".keyboards",".buttons[@\"return\"]",".buttons[@\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/ tap];
     [/*@START_MENU_TOKEN@*/app.staticTexts[@"SUM"]/*[["app","[",".otherElements matchingIdentifier:@\"0 SUM quit\"]",".otherElements[@\"SUM\"].staticTexts[@\"SUM\"]",".staticTexts[@\"SUM\"]"],[[[-1,0,1]],[[-1,4],[-1,3],[1,2,2]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/ tap];
     XCUIElement *diffLabel = [[XCUIApplication alloc] init].staticTexts[@"5"];
+    XCTAssertEqual(diffLabel.exists, true);
+  }];
+}
+
+- (void)testQuit {
+    // UI tests must launch the application that they test.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  [XCTContext runActivityNamed:@"screenshot" block:^(id<XCTActivity>  _Nonnull activity) {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [/*@START_MENU_TOKEN@*/app.textFields[@"Ex. 35"]/*[["app","[",".otherElements matchingIdentifier:@\"Ex. 35 Ex. 3 0 SUM quit\"]",".otherElements[@\"Ex. 35\"].textFields[@\"Ex. 35\"]",".textFields[@\"Ex. 35\"]"],[[[-1,0,1]],[[-1,4],[-1,3],[1,2,2]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/ tap];
+    [app.textFields[@"Ex. 35"] typeText:@"3"];
+    
+    [/*@START_MENU_TOKEN@*/app.textFields[@"Ex. 3"]/*[["app","[",".otherElements matchingIdentifier:@\"Ex. 3 0 SUM quit\"]",".otherElements[@\"Ex. 3\"].textFields[@\"Ex. 3\"]",".textFields[@\"Ex. 3\"]"],[[[-1,0,1]],[[-1,4],[-1,3],[1,2,2]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/ tap];
+    [/*@START_MENU_TOKEN@*/app.textFields[@"Ex. 3"]/*[["app","[",".otherElements matchingIdentifier:@\"Ex. 3 0 SUM quit\"]",".otherElements[@\"Ex. 3\"].textFields[@\"Ex. 3\"]",".textFields[@\"Ex. 3\"]"],[[[-1,0,1]],[[-1,4],[-1,3],[1,2,2]],[[-1,4],[-1,3]]],[0,0]]@END_MENU_TOKEN@*/ typeText:@"2"];
+    
+    [app/*@START_MENU_TOKEN@*/.buttons[@"Return"]/*[[".keyboards",".buttons[@\"return\"]",".buttons[@\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [app.staticTexts[@"quit"] tap];
+    XCUIElement *diffLabel = [[XCUIApplication alloc] init].staticTexts[@"1"];
     XCTAssertEqual(diffLabel.exists, true);
   }];
 }
